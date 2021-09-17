@@ -1,37 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style3.css">
-    <title>Formulario de Registro</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+	<title>Formulario de Registro</title>
+	<link rel="icon" href="https://cdn.glitch.com/65c1b8f1-cb52-4f14-9c54-49d1921a65e4%2Ffilm.png?v=1631331965612" type="images/film">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <section class="formRegistro">
-        <h4>Formulario de Registro</h4>
-        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese Nombre (*)">
-        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese Apeliido (*)">
-        <input class="controls" type="email" name="email1" id="email1" placeholder="Ingrese Email (*)">
-        <input class="controls" type="email" name="email2" id="email2" placeholder="Confirme Email (*)">
-        <input class="controls" type="text" name="telefono" id="telefono" placeholder="Ingrese Telefono (*)">        
-        <select class="controls" name="select" id="select">
-            <option value="value0">Seleccione Genero</option>
-            <option value="value1">Masculino</option>
-            <option value="value2">Femenino</option>
-        </select>
-        <input class="controls" type="password" name="psw1" id="psw1" placeholder="Ingrese Pasword (*)">
-        <input class="controls" type="password" name="psw1" id="psw1" placeholder="Confirme Pasword (*)">
-        <input class="controls" type="text" name="ciudad" id="ciudad" placeholder="Ciudad Residencia">        
-        <input class="controls" type="text" name="direccion" id="direccion" placeholder="Direccion Residencia">        
-        <input class="controls" type="date" name="fcumple" id="fcumple">
-        <p1>Administrador? </p1>        
-        <input class="chk-box" type="checkbox" id="cboxAdmin" value="administrador">            
-        <p>(*) Campos Obligatorios</p>
-        <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>        
-        <input class = "botons" type="button" value="Registro">
-        <p>¿Ya tienes una cuenta? <a href="#">Ingresa aqui</a></p>        
-    </section>
-    
+	<header>
+		<!--Inicio Menu de Navegacion-->
+		<div class="contenedor">
+			<h2 class="logotipo">SIRCi</h2>
+			<nav>
+				<a href="https://sirci.glitch.me/" class="activo"><i class="fas fa-film"></i> Inicio</a>				
+				<a href="#"><i class="fas fa-photo-video"></i> Cartelera</a>
+			</nav>
+		</div>
+		<!--Fin Menu de Navegacion-->
+	</header>
+
+	<main>
+		<div class="contain">
+					  
+			  <div class="form">
+				<h1>Formulario de Registro</h1>
+				<form action="">
+				  <p>					
+					<input class="controls" type="text" name="nombres" id="nombre" placeholder="Ingrese Nombre (*)" required>
+				  </p>
+				  <p>
+					<input class="controls" type="text" name="apellidos" id="apellido" placeholder="Ingrese Apeliido (*)" required>					
+				  </p>
+				  <p>
+					<input class="controls" type="email" name="email1" id="email1" placeholder="Ingrese Email (*)" required>
+				  </p>
+				  <p>
+					<input class="controls" type="email" name="email2" id="email2" placeholder="Confirme Email (*)" required>
+				  </p>
+
+				  <p>
+					<input class="controls" type="text" name="telefono" id="telefono" placeholder="Ingrese Telefono (*)" required>        
+				  </p>
+
+				  <p>
+					<select class="controls" name="select" id="select">
+						<option value="value0">Seleccione Genero</option>
+						<option value="value1">Masculino</option>
+						<option value="value2">Femenino</option>
+					</select>
+				  </p>
+
+				  <p>
+					<input class="controls" type="password" name="psw1" id="psw1" placeholder="Ingrese Password (*)" required>					
+				  </p>
+
+				  <p>
+					<input class="controls" type="password" name="psw1" id="psw1" placeholder="Confirme Password (*)" required>
+				  </p>
+
+				  <p>
+					<input class="controls" type="text" name="ciudad" id="ciudad" placeholder="Ciudad Residencia">        
+				  </p>
+
+				  <p>
+					<input class="controls" type="text" name="direccion" id="direccion" placeholder="Direccion Residencia">        
+				  </p>
+
+				  <p>
+					<input class="controls" type="date" name="fcumple" id="fcumple">
+				  </p>
+
+				  <p>					
+					<input class="chk-box" type="checkbox" id="cboxAdmin" value="administrador">            
+					<p1>  Administrador? </p1>
+				  </p>
+
+				  <p2>(*) Campos Obligatorios</p2>
+
+				  <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>        
+				  				  
+				  <p>				
+					<input class = "button" type="submit" onclick="mensaje()" value="Registrar">
+				  </p>
+
+				  <p>¿Ya tienes una cuenta? <a href="#">Ingresa aqui</a></p>        
+
+				</form>
+			  </div>
+		</div>		  		
+	</main>		
+
+	<!--Inicio Pie de Sitio-->
+	<footer class="footer-section">
+        
+    </footer>
+	<!--Fin Pie de Sitio-->
+
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+		function mensaje(){
+			sweetAlert("Oops!", "Something went wrong on the page!", "error");
+		}
+	</script>
 </body>
 </html>
+
