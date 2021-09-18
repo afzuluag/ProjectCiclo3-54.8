@@ -1,59 +1,203 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo, 
+.title .logo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/backdrop.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+.pelicula-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+	background: #fff;
+	color: #000;
+}
+
+.pelicula-principal .boton i {
+	margin-right: 1.25em;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+}
+
 /* Estilos para la Página de Login, Interfaz de Acceso IU02*/
-.login-page {
-    width: 400px;
-    padding: 8% 0 0;
-    margin: auto;
-  }
 
-.login {
-    position: relative;
-    z-index: 1;
-    background: #FFFFFF;
-    max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 45px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  }
-.login input {
-    font-family: sans-serif;
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-  }
+.modal-login {
+  display: none;
+}
 
-.login .login__submit {
-    font-family: sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4CAF50;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
-  }
+.modal-login:target {
+  display: block;
+  width: 100%;
+  height: 120%;
+  position: fixed;
+  background: rgba(2, 5, 10, 0.8);
+  top: 0;
+  left: 0;
+  color: #fff;
+  padding: 8% 0 0;
+  margin: auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  overflow-y: auto;
+}
 
-.login .login__submit:hover,.login .login__submit:active,.login .login__submit:focus {
-    background: #321c91;
+
+.form-modal-login input {
+  
+  font-family: sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+    /*width: 100%;*/
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form-modal-login {
+  background: rgba(0,0,0, 0.5);
+  color: #FFFFFF;
+  font-size: 14px;
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
+  height: auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items:center;
+}
+
+
+.form-modal-login__submit{
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.form-modal-login__remember{
+  display: inline-flex;
+}
+
+.form-modal-login__submit:hover, .form-modal-login__submit:active,
+.form-modal-login__submit:focus {
+
+  background: #000000;
+  color: #fff;
+
   }
   
-.login a {
-    color: #40279b;
-    text-decoration: none;
+.modal-login a {
+  color: #40279b;
+  text-decoration: none;
   }
 
-.login__remember{
-    width: 80%;
-  }
 
 
  /* Estilos para la Página de Cartelera, Interfaz de Gestion de Peliculas IU03 */
@@ -62,9 +206,9 @@
   width: auto;
   margin: auto;
   list-style: none;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
-  align-content: space-around;
+  align-content: normal;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -92,6 +236,9 @@
   font-size: 15px;
   text-align: center;
   font-weight: bold;
+  color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
 }
 
 .name-movie {
@@ -102,16 +249,43 @@
   padding: 10px;
   display: grid;
   align-content: space-evenly;
+  text-decoration: none;
+  color: #000;
+ 
 }
 
-/*Estilos del modal addmovie*/
+.title__btn-new:hover{
+    text-decoration: none;
+    color: #fff;
+    background: #000;
+
+}
+
+.name-movie__btn-edit{
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+}
+
+.name-movie__btn-edit:hover{
+  text-decoration: none;
+  color: #fff;
+  background: #000;
+}
+
+.name-movie__btn-delete:hover{
+  text-decoration: none;
+  color: #fff;
+  background: #000;
+}
+
+/*Estilos del modal addmovie, para la creacion de Peliculas*/
 
 .modal-addmovie{
   display:none;
 }
 
 .modal-addmovie:target {
-  display: inline-block;
   text-align: center;
   position: fixed;
   background: rgba(2, 5, 10, 0.8);
@@ -123,6 +297,10 @@
   padding: 8% 0 0;
   margin: auto;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
 }
 
 .modal-addmovie__title{
@@ -165,26 +343,11 @@
 }
 
 .image img{
-  width: 500px;
+  width: auto;
   height: 100%;
   max-width: 100%;
   border: 7px solid #fff;
   box-sizing: border-box;
-}
-
-.close {
-  display: block;
-  background: #fff;
-  width: 25px;
-  height: 25px;
-  margin: 15px auto;
-  text-align: center;
-  text-decoration: none;
-  font-size: 25px;
-  color: #000;
-  padding: 5px;
-  border-radius: 50%;
-  line-height: 25px;
 }
 
 .dropdown-menu__content{
@@ -213,67 +376,63 @@
   position:fixed;
 }
 
-/*Estilos de POágina de Inicio*/
+/*Estilos de Página de Inicio*/
+
+.galery-movies{
+ display: inline;
+ width: auto;
+}
+
+.galery-movies__center img {
+  width: auto;
+  height: 300px;
+  max-width: 100%;
+  margin: 0px;
+  /*border-radius: 10%;*/
+  align-items: center;
+}
+
+.galery-movies__sides img{
+  width: auto;
+  max-width: 100%;
+  height: 400px;
+}
+
+/*Estilos para el modal de visualizacion de informacion de las peliculas de la página de Index*/
+
 .modal-view-movie{
   display:none;
 }
 
 .modal-view-movie:target {
-  display: inline-block;
-  text-align: center;
+  display: block;
+  width: 100%;
+  /*height: auto;*/
   position: fixed;
   background: rgba(2, 5, 10, 0.8);
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   color: #fff;
   padding: 8% 0 0;
   margin: auto;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  overflow-y: auto;
+  min-height: 300px;
 }
 
-.galery-movies{
-  display: inline-block;
-}
-
-.galery-movies__center img{
-  width: 15%;
-  height: 50%;
-  padding: 1px;
-  display: inline-flex;
-  position: relative;
-  align-items: center;
-}
-
-.galery-movies__sides img{
-  width: 25%;
-  height: 50%;
-  padding: 1px;
-  display: inline-flex;
-  position: fixed;
-  margin: auto;
-  align-items: center;
-}
-
-.title h2{
-  padding: 0%;
-  margin: 0%;
+/*Estilo para el cerrado de las ventanas modales*/
+.close {
+  display: block;
+  background: #fff;
+  width: 25px;
+  height: 25px;
+  margin: 15px auto;
   text-align: center;
-}
-
-.nav-link {
-  display: inline-block;
-  padding: 10px 30px;
-  color: rgb(12, 12, 12);
-  /*background: #4CAF50;*/
   text-decoration: none;
-}
-.nav-link:hover {
-  background: #321c91;
-  color: #fff;
-}
-
-nav {
-  text-align: end;
+  font-size: 25px;
+  color: #000;
+  padding: 1px;
+  border-radius: 50%;
+  line-height: 25px;
+  align-items: center;
 }

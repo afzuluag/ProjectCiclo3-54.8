@@ -5,86 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    
     <title>Inicio</title>
 </head>
 <body>
-    <div class="title">
-        <h2>Peliculas en Cartelera</h2>
-    </div>
-    <nav>
-        <a href="#" class="nav-link">Inicio </a>
-        <a href="#" class="nav-link">Cartelera </a>
-        <a href="#" class="nav-link">Inicia Sesion </a>
-        <a href="#" class="nav-link">Registro </a>
-    </nav>
-    <div class="galery-movies">
-        <div class="galery-movies__sides">
-            <a href="#imgmovie1"><img src="img/imagen1.jpg" alt=""></a>
+    <!--Head pag-->
+    <header>
+        <div class="title">
+            <h2 class="logo">Peliculas en Cartelera</h2>
+            <nav>
+                <a href="index.html" class="nav-link">Inicio </a>
+                <a href="#" class="nav-link">Cartelera </a>
+                <a href="#login" class="nav-link">Inicia Sesion </a>
+                <a href="#" class="nav-link">Registro </a>
+                <a href="gestorPeliculas.html" class="nav-link">Gestion</a>
+            </nav>
         </div>
-        <div class="galery-movies__center">
-            <a href="#"><img alt="" ></a>
-            <a href="#"><img alt="" ></a>
-            <a href="#"><img alt="" ></a>
-            <a href="#imgmovie2"><img src="img/imagen2.jpg" alt=""></a>
-            <a href="#imgmovie3"><img src="img/imagen3.jpg" alt=""></a>
-            <a href="#imgmovie4"><img src="img/imagen4.jpg" alt=""></a>
-            <a href="#"></a><img alt=""></a>
-        </div>
-        <div class="-movies__sides">
-            <a href="#imgmovie5"><img src="img/imagen5.jpg" alt="" ></a>
+    </header>
+
+    <!--Galeria de peliculas - Inicio-->
+    <div class="movies">
+        <div class="galery-movies">
+            <a href="#imgmovie1" class="galery-movies__sides"><img src="img/imagen1.jpg" alt=""></a>
+            <a href="#imgmovie2" class="galery-movies__center"><img src="img/imagen2.jpg" alt=""></a>
+            <a href="#imgmovie3" class="galery-movies__center"><img src="img/imagen3.jpg" alt=""></a>
+            <a href="#imgmovie4" class="galery-movies__center"><img src="img/imagen4.jpg" alt=""></a>
+            <a href="#imgmovie5" class="galery-movies__sides"><img src="img/imagen5.jpg" alt="" ></a>
         </div>
     </div>
 
+    <!--Modal para visualizacion adicional de informacion de peliculas-->
     <div class="modal-view-movie" id="imgmovie1">
-        <h3>Paisaje 1</h3>
+        <a href="" class="close">X</a>
+        <h3></h3>
         <div class="image">
             <a href="#imgmovie4">&#60</a>
             <a href="#imgmovie2"><img src="img/imagen1.jpg" alt=""></a>
             <a href="#imgmovie2">></a>
         </div>
-        <a href="" class="close">X</a>
     </div>
 
     <div class="modal-view-movie" id="imgmovie2">
-        <h3>Paisaje 1</h3>
+        <a href="" class="close">X</a>
+        <h3></h3>
         <div class="image">
             <a href="#imgmovie1">&#60</a>
             <a href="#imgmovie3"><img src="img/imagen2.jpg" alt=""></a>
             <a href="#imgmovie3">></a>
         </div>
-        <a href="" class="close">X</a>
     </div>
 
     <div class="modal-view-movie" id="imgmovie3">
-        <h3>Paisaje 1</h3>
+        <a href="" class="close">X</a>
+        <h3></h3>
         <div class="image">
             <a href="#imgmovie2">&#60</a>
             <a href="#imgmovie4"><img src="img/imagen3.jpg" alt=""></a>
             <a href="#imgmovie4">></a>
         </div>
-        <a href="" class="close">X</a>
     </div>
 
     <div class="modal-view-movie" id="imgmovie4">
-        <h3>Paisaje 1</h3>
+        <a href="" class="close">X</a>
+        <h3></h3>
         <div class="image">
             <a href="#imgmovie3">&#60</a>
             <a href="#imgmovie5"><img src="img/imagen4.jpg" alt=""></a>
             <a href="#imgmovie5">></a>
         </div>
-        <a href="" class="close">X</a>
     </div>
 
     <div class="modal-view-movie" id="imgmovie5">
-        <h3>Paisaje 1</h3>
+        <a href="" class="close">X</a>
+        <h3></h3>
         <div class="image">
             <a href="#imgmovie4">&#60</a>
             <a href="#imgmovie1"><img src="img/imagen5.jpg" alt=""></a>
             <a href="#imgmovie1">></a>
         </div>
-        <a href="" class="close">X</a>
     </div>
 
+    <!--Modal para login-->
+    <div class="modal-login" id="login">
+		<form action="" method="get" class="form-modal-login">
+            <a href="" class="close">X</a>
+			<label for="email" class="form-modal-login__label-email">E-mail</label>
+			<input type="email" name="email" class="form-modal-login__email" requiered>
+			<label for="pass" class="form-modal-login__label-pass">Contraseña</label>
+			<input type="password" name="pass" class="form-modal-login__pass" requiered>
+            <input type="checkbox" name="remember" class="form-modal-login__remember" value="yes">Recuerda mi nombre de Usuario
+           
+			<div>
+				<a href="http://">Olvidé mi contraseña</a><br>
+				<a href="http://">Registrarse</a>
+			</div>
+			<input type="submit" value="Ingresar" class="form-modal-login__submit">
+		</form>
+	</div>
     
 </body>
 </html>
