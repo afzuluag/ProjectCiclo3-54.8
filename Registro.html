@@ -58,7 +58,7 @@
 				  </p>
 
 				  <p>
-					<input class="controls" type="password" name="psw1" id="psw1" placeholder="Confirme Password (*)" required>
+					<input class="controls" type="password" name="psw2" id="psw2" placeholder="Confirme Password (*)" required>
 				  </p>
 
 				  <p>
@@ -83,7 +83,7 @@
 				  <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>        
 				  				  
 				  <p>				
-					<input class = "button" type="submit" onclick="mensaje()" value="Registrar">
+					<input class = "button" type="submit" onclick="return validarRegistro();" value="Registrar">
 				  </p>
 
 				  <p>¿Ya tienes una cuenta? <a href="#">Ingresa aqui</a></p>        
@@ -99,11 +99,7 @@
     </footer>
 	<!--Fin Pie de Sitio-->
 
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
-		function mensaje(){
-			sweetAlert("Oops!", "Something went wrong on the page!", "error");
-		}
-	</script>
+	<script src="js/app.js"></script>
 </body>
 </html>
 
