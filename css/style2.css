@@ -1,16 +1,24 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+
 body{
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
 }
 
+/*Barra Superior*/
 header{
     position: fixed;
-    background: #739490;
+    background: var(--fondo);            
     padding: 20px;
     width: 100%;
-    height: 30px;
-
+    height: 27px;
+    border-color: #fff;
+    border-style:ridge;
 }
 
 .left_area h3{
@@ -21,12 +29,12 @@ header{
 }
 
 .left_area span{
-    color: #FFC300;
+    color: var(--rojo);
 }
 
 .logout_btn{
     padding: 5px;
-    background: #FFC300;
+    background: var(--rojo);
     text-decoration: none;
     float: right;
     margin-top: -30px;
@@ -34,7 +42,7 @@ header{
     border-radius: 2px;
     font-size: 15px;
     font-weight: 600;
-    color: #fff;
+    color: black;
     transition: 0.5s;
     transition-property: background;
 }
@@ -43,8 +51,11 @@ header{
     background: #900C3F;
 } 
 
+/*css Menu lateral */
 .sidebar{
-    background: #444E4D;
+    background: #141414f1;
+    border-color: #fff;
+    border-style:ridge;
     margin-top: 70px;
     padding-top: 30px;
     position: fixed;
@@ -62,8 +73,8 @@ header{
     margin-bottom: 10px;    
 }
 
-.sidebar .h4{
-    color: #ccc;
+.sidebar h4{
+    color: var(--rojo);
     margin-top: 0;
     margin-bottom: 20px;
 }
@@ -81,7 +92,7 @@ header{
 }
 
 .sidebar a:hover{
-    background: #19b3d3;
+    background: var(--rojo);
 }
 
 .sider i{
@@ -104,12 +115,13 @@ label #sidebar_btn:hover{
     color: #FFC300;
 }
 
+/*css Contenido central */
 .content{
-    margin-left: 250px;
-    background: url("https://www.wallpapertip.com/wmimgs/15-155707_film-desktop-background-film-wallpaper-background-film-wallpaper.jpg") no-repeat;
+    margin-left: 250px;    
     background-position: center;
+    background: var(--fondo);
     background-size: cover;
     height: 100vh;
-    transition: 0.5s;
+    transition: 0.5s;    
 }
 
