@@ -1,70 +1,78 @@
-var nombre = document.getElementById('nombre');
-var apellido = document.getElementById('apellido');
-var email1 = document.getElementById('email1');
-var email2 = document.getElementById('email2');
-var telefono = document.getElementById('telefono');
-var psw1 = document.getElementById('psw1');
-var psw2 = document.getElementById('psw2');
-var error = document.getElementById('error');
+var app = new Vue({
+    el:"#app",
+    data: {
+        nombre: null,
+        apellido: null,
+        email1: null,
+        email2: null,
+        telefono: null,    
+        psw1: null,
+        psw2: null,
+        valor: true,        
+    },
 
-function validarRegistro(){    
-    console.log('Validando formulario...'); /**Permite ver el mensaje en consola */
-    var mensajesError= [];
-    var valor = true;
+    methods:{
+        validateForm: function(e){
+            
+            if(!this.nombre){
+                alert("Debes agregar el nombre!");
+                this.valor = false;
+                e.preventDefault();
+            }
 
-    if(nombre.value === null || nombre.value === ""){
-        mensajesError.push(" Ingresa tu nombre");
-        valor=false;
+            if(!this.apellido){
+                alert("Debes agregar los apellidos!");
+                this.valor = false;
+                e.preventDefault();
+            }
+
+            if(!this.email1){
+                alert("Debes agregar el email!");
+                this.valor = false;
+                e.preventDefault();
+            }
+
+            if(!this.email2){
+                alert("Debes de confirmar el email!");
+                this.valor = false;
+                e.preventDefault();
+            }
+
+            if(this.email1 !== this.email2){
+                alert("La confirmacion del Email no es correcta, por favor verificar");
+                this.valor = false;
+                e.preventDefault();
+            }
+    
+            if(!this.telefono){
+                alert("Debes agregar el telefono!");
+                this.valor = false;
+                e.preventDefault();
+            }
+
+            if(!this.psw1){
+                alert("Debes agregar el password!");
+                this.valor = false;
+                e.preventDefault();
+            }
+            
+            if(!this.psw2){
+                alert("Debes confirmar el password!");
+                this.valor = false;
+                e.preventDefault();
+            }
+
+            if(this.psw1 !== this.psw2){
+                alert("La confirmacion del Password no es correcta, por favor verificar");
+                this.valor = false;
+                e.preventDefault();
+            }                 
+            
+            if(this.valor == true){
+                alert("Registro Exitoso");                
+            }
+
+            this.valor = true;
+        }
     }
-
-    if(apellido.value === null || apellido.value === ""){
-        mensajesError.push(" Ingresa tu apellido");
-        valor=false;
-    }
-
-    if(email1.value === null || email1.value === ""){
-        mensajesError.push(" Ingresa tu email");
-        valor=false;
-    }
-
-    if(email2.value === null || email2.value === ""){
-        mensajesError.push(" Confirma tu email");
-        valor=false;
-    }
-
-    if(email2.value !== email1.value){
-        mensajesError.push(" Verifica Tu Email");
-        valor=false;
-    }
-
-    if(telefono.value === null || telefono.value === ""){
-        mensajesError.push(" ingresa tu telefono");
-        valor=false;
-    }
-
-    if(psw1.value === null || psw1.value === ""){
-        mensajesError.push(" ingresa tu password");
-        valor=false;
-    }
-
-    if(psw2.value === null || psw2.value === ""){
-        mensajesError.push(" Confirma tu password");
-        valor=false;
-    }
-
-    if(psw2.value !== psw1.value){
-        mensajesError.push(" Verifica Tu Password");
-        valor=false;
-    }
-
-    mensajesError.join(' , ');    
-   
-    if(valor === false){
-        return  window.alert(mensajesError);
-    }else{
-        window.alert("Registro Exitoso");   
-        location.href = 'https://steep-sunset-seaplane.glitch.me';        
-    }    
-}
-
-/*return false evita que el formulario se envie por defecto*/
+})

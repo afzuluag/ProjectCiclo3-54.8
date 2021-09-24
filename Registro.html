@@ -9,6 +9,10 @@
 	<link rel="icon" href="https://cdn.glitch.com/65c1b8f1-cb52-4f14-9c54-49d1921a65e4%2Ffilm.png?v=1631331965612" type="images/film">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	
+	<!--Importacion de la libreria de vue desde la web-->
+	<script src="https://unpkg.com/vue@next"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
 </head>
 <body>
 	<header>
@@ -24,70 +28,73 @@
 	</header>
 
 	<main>
-		<div class="contain">
+		<div class="contain" id="app">
 					  
 			  <div class="form">
 				<h1>Formulario de Registro</h1>
-				<form action="">
-				  <p>					
-					<input class="controls" type="text" name="nombres" id="nombre" placeholder="Ingrese Nombre (*)" required>
-				  </p>
-				  <p>
-					<input class="controls" type="text" name="apellidos" id="apellido" placeholder="Ingrese Apeliido (*)" required>					
-				  </p>
-				  <p>
-					<input class="controls" type="email" name="email1" id="email1" placeholder="Ingrese Email (*)" required>
-				  </p>
-				  <p>
-					<input class="controls" type="email" name="email2" id="email2" placeholder="Confirme Email (*)" required>
-				  </p>
 
-				  <p>
-					<input class="controls" type="text" name="telefono" id="telefono" placeholder="Ingrese Telefono (*)" required>        
-				  </p>
+				<form id="app" @submit="validateForm" action="https://steep-sunset-seaplane.glitch.me/">
+				  	<p>					
+						<input class="controls" type="text" name="nombres" id="nombre" v-model= "nombre" placeholder="Ingrese Nombre Completo (*)">
+				  	</p>
 
-				  <p>
-					<select class="controls" name="select" id="select">
-						<option value="value0">Seleccione Genero</option>
-						<option value="value1">Masculino</option>
-						<option value="value2">Femenino</option>
-					</select>
-				  </p>
+				  	<p>
+						<input class="controls" type="text" name="apellido" id="apellido" v-model= "apellido" placeholder="Ingrese Apeliidos (*)" >					
+					</p>
 
-				  <p>
-					<input class="controls" type="password" name="psw1" id="psw1" placeholder="Ingrese Password (*)" required>					
-				  </p>
+					<p>
+						<input class="controls" type="email" name="email1" id="email1" v-model= "email1" placeholder="Ingrese Email (*)" >
+					</p>
+					<p>
+						<input class="controls" type="email" name="email2" id="email2" v-model= "email2" @blur="validarEmail2" placeholder="Confirme Email (*)">
+					</p>
 
-				  <p>
-					<input class="controls" type="password" name="psw2" id="psw2" placeholder="Confirme Password (*)" required>
-				  </p>
+					<p>
+						<input class="controls" type="text" name="telefono" id="telefono" v-model= "telefono" placeholder="Ingrese Telefono (*)" >        
+					</p>
 
-				  <p>
-					<input class="controls" type="text" name="ciudad" id="ciudad" placeholder="Ciudad Residencia">        
-				  </p>
+					<p>
+						<select class="controls" name="select" id="select" v-model= "select">
+							<option value="value0">Seleccione Genero</option>
+							<option value="value1">Masculino</option>
+							<option value="value2">Femenino</option>
+						</select>
+					</p>
 
-				  <p>
-					<input class="controls" type="text" name="direccion" id="direccion" placeholder="Direccion Residencia">        
-				  </p>
+					<p>
+						<input class="controls" type="password" name="psw1" id="psw1" v-model= "psw1" placeholder="Ingrese Password (*)">					
+					</p>
 
-				  <p>
-					<input class="controls" type="date" name="fcumple" id="fcumple">
-				  </p>
+					<p>
+						<input class="controls" type="password" name="psw2" id="psw2" v-model= "psw2" placeholder="Confirme Password (*)" >
+					</p>
 
-				  <p>					
-					<input class="chk-box" type="checkbox" id="cboxAdmin" value="administrador">            
-					<p1>  Administrador? </p1>
-				  </p>
+					<p>
+						<input class="controls" type="text" name="ciudad" id="ciudad" v-model= "ciudad" placeholder="Ingrese Ciudad Residencia">        
+					</p>
 
-				  <p2>(*) Campos Obligatorios</p2>
+					<p>
+						<input class="controls" type="text" name="direccion" id="direccion" v-model= "direccion" placeholder="Ingrese Direccion Residencia">        
+					</p>
 
-				  <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>        
-				  				  
-				  <p>				
-					<input class = "button" type="submit" onclick="return validarRegistro();" value="Registrar">
-				  </p>
+					<p>
+						<input class="controls" type="date" name="fcumple" id="fcumple" v-model= "fcumple">
+					</p>
 
-				  <p>¿Ya tienes una cuenta? <a href="#">Ingresa aqui</a></p>        
+					<p>					
+						<input class="chk-box" type="checkbox" id="cboxAdmin" value="administrador">            
+						<p1>  Administrador? </p1>
+					</p>
+
+					<p2>(*) Campos Obligatorios</p2>
+
+					<p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>        
+									
+					<p>				
+						<input class = "button" type="submit" value="Registrar">
+					</p>
+
+					<p>¿Ya tienes una cuenta? <a href="#">Ingresa aqui</a></p>        
 
 				</form>
 			  </div>
@@ -99,8 +106,8 @@
         
     </footer>
 	<!--Fin Pie de Sitio-->
-
-	<script src="js/app.js"></script>
+	    
+    <script src="js/app.js"></script>
 </body>
 </html>
 
