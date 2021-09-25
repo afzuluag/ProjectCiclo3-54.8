@@ -1,0 +1,29 @@
+{
+    "movies": [
+        {
+            "title": "Infinite",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio culpa facere sapiente excepturi accusantium delectus mollitia repellendus placeat, voluptatum deserunt harum temporibus, inventore vitae et soluta deleniti pariatur praesentium eveniet.",
+            "image": "./img/imagen1.jpg"
+        },
+        {
+            "title": "Jungle Cruise",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio culpa facere sapiente excepturi accusantium delectus mollitia repellendus placeat, voluptatum deserunt harum temporibus, inventore vitae et soluta deleniti pariatur praesentium eveniet.",
+            "image": "./img/imagen2.jpg"
+        },
+        {
+            "title": "SAS El ascenso del cisne negro",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio culpa facere sapiente excepturi accusantium delectus mollitia repellendus placeat, voluptatum deserunt harum temporibus, inventore vitae et soluta deleniti pariatur praesentium eveniet.",
+            "image": "./img/imagen3.jpg"
+        },
+        {
+            "title": "Sweet Girl",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio culpa facere sapiente excepturi accusantium delectus mollitia repellendus placeat, voluptatum deserunt harum temporibus, inventore vitae et soluta deleniti pariatur praesentium eveniet.",
+            "image": "./img/imagen4.jpg"
+        },
+        {
+            "title": "El Ultimo Mercenario",
+            "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio culpa facere sapiente excepturi accusantium delectus mollitia repellendus placeat, voluptatum deserunt harum temporibus, inventore vitae et soluta deleniti pariatur praesentium eveniet.",
+            "image": "./img/imagen5.jpg"
+        }
+    ]
+}
