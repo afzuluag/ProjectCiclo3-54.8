@@ -1,0 +1,126 @@
+:root {
+    --rojo: #E50914;
+    --fondo: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    padding: 30px 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;
+}
+
+header nav a {
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: #FFF;
+}
+
+/* CSS Formulario*/
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    padding: 1rem;
+}
+
+.contain {
+    max-width: 600px;	
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+                
+.form {	
+    background: #fff;
+    border-radius: 5px;
+    
+}
+
+.form h1{
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+}
+
+form p {
+    margin-left: 10px;
+    margin-right: 10px;	
+}
+
+form p2{
+    margin-left: 10px;
+    margin-right: 10px;
+    color:red;
+    font-size: 13px;
+}
+    
+.button {
+    background: lightgrey;	
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding: 1em;
+    border: 5px red;
+    grid-column: 1 / 2;
+}
+
+.button:hover, button:focus {
+    background: rgb(54, 17, 221);
+    color: white;
+    outline: 0;
+}
+
+.controls{
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #8b8b8b;
+    font-family: sans-serif;
+    font-size: 15px;    
+}
