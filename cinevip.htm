@@ -25,10 +25,6 @@ function changeImage(nsilla,i) {
 
             estaSilla = document.getElementById(nsilla).src ;
     
-            /*if (document.getElementById(nsilla).src == "file:///C:/datos/imagen-mintic/silla2.png") {
-               return;
-            endif
-            */
             if ( estaSilla == "file:///C:/datos/imagen-mintic/silla21.png" ) {
                return ;
             endif   
@@ -42,11 +38,7 @@ function changeImage(nsilla,i) {
 }
 function changeImage2(nsilla) {
 
-        /*if (document.getElementById("A1").src == "c:/datos/imagen-mintic/silla1.png") 
-        {  */
-            document.getElementById(nsilla).src = "c:/datos/imagen-mintic/silla-vip41.png";
-        /*}
-        */
+
             sillas.push( nsilla );
             text += "Reservar: " +nsilla + "<br>";             
             document.getElementById("demo").innerHTML = text;              
@@ -250,9 +242,6 @@ function changeImage2(nsilla) {
        </ul>
      </div> 
 
-  <!-- <p id="demo"></p>  
-
-  </div>   -->
 
 </div>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
